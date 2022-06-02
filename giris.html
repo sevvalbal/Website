@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Giriş Yap</title>
+    <link rel="stylesheet" type="text/css"
+        href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+   <link rel="stylesheet" type="text/css" href="css/reset.css">
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+</head>
+<header>
+    <div class="container">
+        <div class="logo">
+            <a href="index.html"> <img src="img/logo.jpg"> </a>
+
+        </div>
+        <div class="menu">
+            <ul>
+                <li><a href="index.html">ANASAYFA</a></li>
+                <li><a href="turlarımız.html">TURLARIMIZ</a></li>
+                <li><a href="galeri.html">GALERİ</a></li>
+                <li><a href="hakkımızda.html">HAKKIMIZDA</a></li>
+                <li><a href="iletisim.html">İLETİŞİM</a></li>
+                <ul class="nav navbar-nav ">
+                    <li><a href="kaydol.html"><span class="glyphicon glyphicon-user"></span> Kaydol</a></li>
+                    <li><a href="giris.html"><span class="glyphicon glyphicon-log-in"></span> Giriş Yap</a></li>
+                </ul>
+            </ul>
+ </div>
+    </div>
+</header>
+  <body>
+      <div class="login-form">
+          <div class="login-face"><img src="img/avatar.png"> </div>
+          <section class="form">
+              <form>
+              <div class="input uname">
+                  <input type="text" id="username" placeholder="Kullanıcı Adı" required/>
+                </div>
+              <div class="input pass">
+                  <input type="password" id="password" placeholder="Şifre" required/>
+                  
+              </div>
+              <a href="#" style="float:right; color:gray; font-size:14px; text-decoration:none; font-family:sans-serif,Arial; margin-bottom:10px;">Şifrenizi mi unuttunuz?</a>
+              <p class="error-msg">Wrong Crendtial</p>
+              <div>
+                  <input type="submit" id="login" value="Giriş Yap"   />
+              </div>
+              </form>
+          </section>
+      </div>
+      <script src="js/jquery-3.3.1.js"></script>
+      <script type="text/javascript">
+      $(document).ready(function(){
+          $("#login").click(function(){
+              if($("#username").val()==""){
+                  $(".input").addClass("error");
+                  $("username").css({"border":"2px solid red"});
+              }
+              if($("#password").val()==""){
+                  $(".input").addClass("error");
+              }
+          })
+          $(".input").click(function(){
+                  $(".input").removeClass("error");
+                  $("username").css({"border":"2px solid #ddd"});
+
+              })
+      })
+      
+      </script>
+
+
+
+
+  </body>
+    
+</html>
